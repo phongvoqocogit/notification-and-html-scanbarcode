@@ -9,8 +9,6 @@ class Html5QrcodePlugin extends React.Component {
     }
 
     componentWillUnmount() {
-        // TODO(mebjas): See if there is a better way to handle
-        //  promise in `componentWillUnmount`.
         this.html5QrcodeScanner.clear().catch(error => {
             console.error("Failed to clear html5QrcodeScanner. ", error);
         });
